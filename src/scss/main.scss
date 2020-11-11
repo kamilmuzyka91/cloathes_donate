@@ -1,9 +1,15 @@
 @import "./reset";
+@import "./settings/fonts";
+@import "./settings/colors";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: rgb(124, 10, 10);
+  font-family: $font-base;
+  background: $darker-yellow;
+  .test {
+      font-family: $font-alt;
+  }
 }

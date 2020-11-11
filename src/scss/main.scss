@@ -1,10 +1,11 @@
-@import "./reset";
+@import "./settings/reset";
 @import "./settings/fonts";
 @import "./settings/colors";
 @import "./settings/mixins";
 
-@import "./home";
-@import "./navigation";
+@import "./layouts/home";
+@import "./layouts/navigation";
+@import "./layouts/welcomeSection";
 
 * {
   box-sizing: border-box;
@@ -17,9 +18,9 @@
 
 body {
   font-family: $font-base;
-  background: $darker-yellow;
+  background: #fff;
   .test {
-      font-family: $font-alt;
-      font-size: px-rem(16);
+    font-family: $font-alt;
+    font-size: px-rem(16);
   }
 }

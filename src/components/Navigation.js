@@ -1,4 +1,5 @@
 import React from "react";
+import WelcomeSection from "./WelcomeSection";
 
 function Navigation() {
   return (
@@ -12,7 +13,7 @@ function Navigation() {
         </li>
       </ul>
       <ul className="navigation__menu">
-        <li className="navigation__menu-link navigation__menu--first">
+        <li className="navigation__menu-link">
           <a href="/#">Start</a>
         </li>
         <li className="navigation__menu-link">
@@ -28,6 +29,7 @@ function Navigation() {
           <a href="/#">Kontakt</a>
         </li>
       </ul>
+      <WelcomeSection />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 # Cloathes donate
 
-App for planning cycling races.
+An application that allows you to give your clothes to who are needed.
 
 ## How to use
 

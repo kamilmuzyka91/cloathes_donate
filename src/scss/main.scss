@@ -1,9 +1,18 @@
 @import "./reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "./settings/mixins";
+
+@import "./home";
+@import "./navigation";
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 body {
@@ -11,5 +20,6 @@ body {
   background: $darker-yellow;
   .test {
       font-family: $font-alt;
+      font-size: px-rem(16);
   }
 }

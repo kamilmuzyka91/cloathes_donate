@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Decoration from "../assets/Decoration.svg";
 
@@ -15,10 +16,14 @@ function WelcomeSection() {
         width="860px"
         height="900px"
       />
-    <div className="header__welcome__cta">
-        <a href="/#" className="header__welcome__cta--btn">oddaj rzeczy</a>
-        <a href="/#" className="header__welcome__cta--btn">zorganizuj zbiórkę</a>
-    </div>
+      <div className="header__welcome__cta">
+        <NavLink className="header__welcome__cta__btn--one" to="/logowanie">
+          oddaj rzeczy
+        </NavLink>
+        <NavLink className="header__welcome__cta__btn--two" to="/logowanie">
+          zorganizuj zbiórkę
+        </NavLink>
+      </div>
     </section>
   );
 }

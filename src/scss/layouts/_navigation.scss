@@ -4,7 +4,7 @@
   .navigation__login {
     display: inline-flex;
     align-self: flex-end;
-    .navigation__login-link {
+    .navigation__login__link {
       font-family: $font-base;
       text-align: right;
       letter-spacing: 0px;
@@ -23,20 +23,18 @@
     display: inline-flex;
     align-self: flex-end;
     margin-top: px-rem(35);
-    .navigation__menu-link {
-      font-family: $font-base;
-      font-size: px-rem(18);
-      margin-left: px-rem(55);
-      letter-spacing: 0px;
-      opacity: 1;
+
+    font-family: $font-base;
+    font-size: px-rem(18);
+    margin-left: px-rem(55);
+    letter-spacing: 0px;
+    opacity: 1;
+    padding: px-rem(10) px-rem(10);
+
+    color: $lighten-black;
+    &:hover {
+      border: px-rem(0.75) solid $lighten-black;
       padding: px-rem(10) px-rem(10);
-      a {
-        color: $lighten-black;
-        &:hover {
-          border: px-rem(0.75) solid $lighten-black;
-          padding: px-rem(10) px-rem(10);
-        }
-      }
     }
   }
 }

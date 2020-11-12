@@ -1,11 +1,11 @@
 import React from "react";
 
-function WhatsGoing() {
+function Contact() {
   return (
     <div className="App">
-     Podstrona: o co chodzi ?
+     <h1>Podstrona: kontakt</h1>
     </div>
   );
 }
 
-export default WhatsGoing;
+export default Contact;

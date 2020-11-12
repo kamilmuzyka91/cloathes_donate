@@ -3,9 +3,9 @@
 @import "./settings/colors";
 @import "./settings/mixins";
 
-@import "./layouts/home";
+@import "./layouts/header";
 @import "./layouts/navigation";
-@import "./layouts/welcomeSection";
+@import "./layouts/_welcomeSection.scss";
 
 * {
   box-sizing: border-box;

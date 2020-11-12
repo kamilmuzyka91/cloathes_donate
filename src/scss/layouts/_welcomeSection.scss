@@ -21,7 +21,15 @@
   .header__welcome__cta {
     display: inline-flex;
     margin: px-rem(20);
-    .header__welcome__cta--btn {
+    .header__welcome__cta__btn--one {
+      text-transform: uppercase;
+      font-size: px-rem(36);
+      padding: px-rem(10) px-rem(100);
+      border: px-rem(1) solid #000;
+      margin: px-rem(20);
+      color: $lighten-black;
+    }
+    .header__welcome__cta__btn--two {
       text-transform: uppercase;
       font-size: px-rem(36);
       padding: px-rem(10) px-rem(80);

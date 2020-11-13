@@ -1,0 +1,18 @@
+.statistic{
+    background-image: url("../../assets/ColumnsBackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .entries {
+        display: inline-flex;
+        align-items: center;
+        margin-top: px-rem(50);
+        .statistic__bag {
+           text-align: center;
+           .statistic__title {
+               color:red;
+           }
+        }
+    }
+}

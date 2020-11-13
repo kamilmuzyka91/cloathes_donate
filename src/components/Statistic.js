@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Statistic({ bag, organization, collection }) {
   return (
-    <section className="statistic container">
+    
+    <section className="statistic">
+    <div className=" container">
       <div className="entries">
         <div className="statistic__bag">
           {bag}
@@ -40,6 +42,8 @@ export default function Statistic({ bag, organization, collection }) {
           </div>
         </div>
       </div>
+      </div>
     </section>
+   
   );
 }

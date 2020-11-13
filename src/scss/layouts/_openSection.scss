@@ -1,27 +1,28 @@
-.header__welcome {
+.open {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: px-rem(220);
   text-align: center;
-  .header__welcome__title {
+  .open__title {
     font-size: px-rem(38);
-    //   text-align: center;
-    letter-spacing: px-rem(-0.76);
+    font-weight: r;
+    text-align: center;
     color: $lighten-black;
+    letter-spacing: px-rem(-0.76);
     width: px-rem(670);
   }
-  .header__img {
+  .open__img {
     align-self: center;
     width: px-rem(400);
     .header__welcome__cta--btn {
       margin: px-rem(10) px-rem(25);
     }
   }
-  .header__welcome__cta {
+  .open__welcome__cta {
     display: inline-flex;
     margin: px-rem(20);
-    .header__welcome__cta__btn--one {
+    .open__welcome__cta__btn--one {
       text-transform: uppercase;
       font-size: px-rem(36);
       padding: px-rem(10) px-rem(100);
@@ -29,7 +30,7 @@
       margin: px-rem(20);
       color: $lighten-black;
     }
-    .header__welcome__cta__btn--two {
+    .open__welcome__cta__btn--two {
       text-transform: uppercase;
       font-size: px-rem(36);
       padding: px-rem(10) px-rem(80);

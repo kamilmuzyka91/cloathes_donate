@@ -1,20 +1,20 @@
 import React from "react";
 
 import HomeHeroImage from "../assets/HomeHeroImage.jpg";
-import Navigation from "./Navigation";
+import HeaderNav from "./HeaderNav";
 
 function Header() {
   return (
-    <section className="header">
+    <header className="header">
       <img
         className="header__img"
         src={HomeHeroImage}
         alt="cloathes"
-        width="860px"
-        height="900px"
+        width="1000px"
+        height="960px"
       />
-      <Navigation />
-    </section>
+      <HeaderNav />
+    </header>
   );
 }
 

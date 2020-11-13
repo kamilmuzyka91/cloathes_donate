@@ -1,53 +1,54 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-import WelcomeSection from "./WelcomeSection";
+// import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navigation() {
   return (
-    
-    <section className="navigation">
-      <ul className="navigation__login">
-        <li className="navigation__login__link">
-          <NavLink className="navigation__menu__link" to="/logowanie">
-            Zaloguj
-          </NavLink>
-        </li>
-        <li className="navigation__login__link">
-          <NavLink className="navigation__menu__link" to="/rejestracja">
-            Załóż konto
-          </NavLink>
-        </li>
-      </ul>
-      <ul className="navigation__menu">
-        <li>
-          <NavLink className="navigation__menu__link" to="/">
-            Start
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigation__menu__link" to="/o_co_chodzi">
-            O co chodzi?
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigation__menu__link" to="/o_nas">
-            O nas
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigation__menu__link" to="/fundacja_i_organizacje">
-            Fundacja i organizacje
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className="navigation__menu__link" to="/kontakt">
-            Kontakt
-          </NavLink>
-        </li>
-      </ul>
-      <WelcomeSection/>,
-    </section>
+    <>
+      <nav className="header__navigation">
+        <ul className="header__navigation__top">
+          <li className="nav__element__top">
+            <NavLink className="nav__link__top" to="/logowanie">
+              Zaloguj
+            </NavLink>
+          </li>
+          <li className="nav__element__top">
+            <NavLink className="nav__link__top" to="/rejestracja">
+              Załóż konto
+            </NavLink>
+          </li>
+        </ul>
+        {/* bottom menu */}
+        <ul className="header__navigation__bottom">
+          <li className="nav__element__bottom">
+            <NavLink className="nav__link__bottom" to="/">
+              Start
+            </NavLink>
+          </li>
+
+          <li className="nav__element__bottom">
+            <NavLink className="nav__link__bottom" to="/o_co_chodzi">
+              O co chodzi?
+            </NavLink>
+          </li>
+          <li className="nav__element__bottom">
+            <NavLink className="nav__link__bottom" to="/o_nas">
+              O nas
+            </NavLink>
+          </li>
+          <li className="nav__element__bottom">
+            <NavLink className="nav__link__bottom" to="/fundacja_i_organizacje">
+              Fundacja i organizacje
+            </NavLink>
+          </li>
+          <li className="nav__element__bottom">
+            <NavLink className="nav__link__bottom" to="/kontakt">
+              Kontakt
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
 

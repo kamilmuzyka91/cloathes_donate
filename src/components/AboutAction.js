@@ -1,11 +1,7 @@
 import React from "react";
 
 function AboutAction() {
-  return (
-    <div className="App">
-     Podstrona: o co chodzi ?
-    </div>
-  );
+  return <h1>o co chodzi</h1>;
 }
 
 export default AboutAction;

@@ -10,6 +10,7 @@ import AboutUs from "./components/AboutUs";
 import Foundation from "./components/Foundation";
 import Contact from "./components/Contact";
 import NotFound from "./components/NotFound";
+import Header from "./components/Header";
 
 function App() {
   return (

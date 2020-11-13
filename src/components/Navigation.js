@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
   return (
     <>
-      <nav className="header__navigation">
-        <ul className="header__navigation__top">
+      <nav className="navigation">
+        <ul className="navigation__top">
           <li className="nav__element__top">
             <NavLink className="nav__link__top" to="/logowanie">
               Zaloguj
@@ -19,7 +19,7 @@ function Navigation() {
           </li>
         </ul>
         {/* bottom menu */}
-        <ul className="header__navigation__bottom">
+        <ul className="navigation__bottom">
           <li className="nav__element__bottom">
             <NavLink className="nav__link__bottom" to="/">
               Start

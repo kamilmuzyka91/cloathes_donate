@@ -16,11 +16,11 @@ function OpenSection() {
         width="860px"
         height="900px"
       />
-      <div className="open__welcome__cta">
-        <NavLink className="open__welcome__cta__btn--one" to="/logowanie">
+      <div className="open__cta">
+        <NavLink className="open__cta__btn btn__one" to="/logowanie">
           oddaj rzeczy
         </NavLink>
-        <NavLink className="open__welcome__cta__btn--two" to="/logowanie">
+        <NavLink className="open__cta__btn btn__two" to="/logowanie">
           zorganizuj zbiórkę
         </NavLink>
       </div>

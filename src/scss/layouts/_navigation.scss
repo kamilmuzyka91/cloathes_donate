@@ -1,75 +1,36 @@
-.header__navigation {
+.navigation {
   display: flex;
   flex-direction: column;
-  .header__navigation__top {
+  .navigation__top {
     display: flex;
     align-self: flex-end;
     .nav__element__top {
-      padding: 0 20px;
+      padding: 0 px-rem(20);
       &:last-child {
         padding-right: 0;
       }
     }
     .nav__link__top {
       font-family: $font-base;
-      font-size: 14px;
+      font-size: px-rem(14);
       color: $gray;
-      letter-spacing: 0px;
     }
   }
   // bottom nav
-  .header__navigation__bottom {
+  .navigation__bottom {
     display: flex;
     align-self: flex-end;
-    margin-top: 35px;
+    margin-top: px-rem(35);
     .nav__element__bottom {
-      padding: 0 20px;
+      padding: 0 px-rem(20);
       &:last-child {
         padding-right: 0;
       }
     }
     .nav__link__bottom {
       font-family: $font-base;
-      font-size: 18px;
+      font-size: px-rem(18);
       color: $lighten-black;
-      letter-spacing: 0px;
     }
   }
 }
-// .navigation {
-//   display: flex;
-//   flex-direction: column;
-//   .navigation__login {
-//     display: inline-flex;
-//     align-self: flex-end;
-//     color: $gray;
-//     .navigation__login__link {
-//       font-family: $font-base;
-//       text-align: right;
-//       letter-spacing: 0px;
-//       padding: 15px;
-//       color: $gray;
-//       a {
-//         color: $gray;
-//       }
-//     }
-//   }
-//   .navigation__menu {
-//     display: inline-flex;
-//     align-self: flex-end;
-//     margin-top: px-rem(35);
-//     font-family: $font-base;
-//     font-size: px-rem(18);
-//     margin-left: px-rem(55);
-//     letter-spacing: 0px;
-//     opacity: 1;
-//     padding: px-rem(10) px-rem(10);
-//     color: $lighten-black;
-//     .navigation__menu__link {
-//       padding-left: 30px;
-//     }
-//     a {
-//       color: $lighten-black;
-//     }
-//   }
-// }

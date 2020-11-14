@@ -6,7 +6,7 @@ import CtaButton from "./CtaButton";
 
 function Steps() {
   return (
-    <section className="steps">
+    <section className="steps" id="aboutWhat">
       <div className="steps__title">
         <h3 className="steps__title__order">Wystarczą 4 proste kroki</h3>
         <img

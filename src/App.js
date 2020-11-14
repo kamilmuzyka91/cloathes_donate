@@ -1,21 +1,29 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import { useUser } from "reactfire";
+
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { useFirebaseApp } from "reactfire";
 
 import Home from "./components/Home";
-import SignUp from "./components/SignUp";
-import LogIn from "./components/LogIn";
-
 import NotFound from "./components/NotFound";
 
-function App() {
-  const firebase = useFirebaseApp();
-  console.log(firebase);
+import SignUp from "./components/SignUp";
+import LogIn from "./components/LogIn";
+import LogOut from "./components/LogOut";
 
+function App() {
+  const user = useUser();
   return (
-    (<Home />),
-    (
+    <>
+      <div className="App">
+        {user && <LogOut />}
+        {!user && (
+          <>
+            <SignUp />
+            <LogIn />
+          </>
+        )}
+      </div>
+
       <HashRouter>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -24,7 +32,7 @@ function App() {
           <Route path="*" component={NotFound} />
         </Switch>
       </HashRouter>
-    )
+    </>
   );
 }
 

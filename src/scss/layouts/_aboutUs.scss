@@ -1,3 +1,37 @@
 .aboutUs {
-    background: $bg-section;
+  display: flex;
+  background: $bg-section;
+
+  .aboutUs__entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .aboutUs__title {
+      font-size: px-rem(38);
+      color: $lighten-black;
+      letter-spacing: px-rem(-0.76);
+      padding: px-rem(168) 0 px-rem(40) 0;
+    }
+    .aboutUs__decoration {
+      padding: 40px 60px;
+    }
+    .aboutUs__info {
+      font-size: px-rem(30);
+      color: $lighten-black;
+      letter-spacing: px-rem(-0.6);
+      padding: px-rem(60) px-rem(60) 0 px-rem(60);
+      line-height: px-rem(55);
+    }
+    .aboutUs__signature {
+      align-self: flex-end;
+      padding: px-rem(60) px-rem(120) px-rem(160) 0;
+    }
+  }
+
+  .aboutUs__photo {
+    width: 50%;
+  }
 }

@@ -24,7 +24,7 @@ function Navigation() {
             <Link
               className="nav__link__bottom"
               activeClass="active"
-              to="/"
+              to="section_1"
               spy={true}
               smooth={true}
               duration={1000}
@@ -36,7 +36,7 @@ function Navigation() {
             <Link
               className="nav__link__bottom"
               activeClass="active"
-              to="aboutWhat"
+              to="section_2"
               spy={true}
               smooth={true}
               duration={1000}
@@ -48,7 +48,7 @@ function Navigation() {
             <Link
               className="nav__link__bottom"
               activeClass="active"
-              to="aboutUs"
+              to="section_3"
               spy={true}
               smooth={true}
               duration={1000}
@@ -60,7 +60,7 @@ function Navigation() {
             <Link
               className="nav__link__bottom"
               activeClass="active"
-              to="foundation"
+              to="section_4"
               spy={true}
               smooth={true}
               duration={1000}
@@ -72,7 +72,7 @@ function Navigation() {
             <Link
               className="nav__link__bottom"
               activeClass="active"
-              to="contact"
+              to="section_5"
               spy={true}
               smooth={true}
               duration={1000}

@@ -4,6 +4,7 @@
 @import "./settings/mixins";
 
 @import "./layouts/ctaButton";
+@import "./layouts/decoration";
 
 @import "./layouts/header";
 @import "./layouts/navigation";
@@ -11,6 +12,7 @@
 @import "./layouts/statistic";
 @import "./layouts/steps";
 @import "./layouts/stepsDescription";
+@import "./layouts/aboutUs";
 
 * {
   box-sizing: border-box;

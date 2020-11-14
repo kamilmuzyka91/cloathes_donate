@@ -5,7 +5,7 @@ import HeaderNav from "./HeaderNav";
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header" id="section_1">
       <img
         className="header__img"
         src={HomeHeroImage}

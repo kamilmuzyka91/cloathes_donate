@@ -1,15 +1,26 @@
-@import "./reset";
+@import "./settings/reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "./settings/mixins";
+
+@import "./layouts/header";
+@import "./layouts/navigation";
+@import "./layouts/openSection";
 
 * {
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 body {
   font-family: $font-base;
-  background: $darker-yellow;
+  background: #fff;
   .test {
-      font-family: $font-alt;
+    font-family: $font-alt;
+    font-size: px-rem(16);
   }
 }

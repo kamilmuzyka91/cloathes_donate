@@ -1,0 +1,13 @@
+.cta__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: px-rem(36);
+    color: $lighten-black;
+    text-transform: uppercase;
+    border: px-rem(0.75) solid #3C3C3C;
+    width: px-rem(310);
+    height: px-rem(120);
+    margin: px-rem(20);
+    padding: px-rem(20);
+}

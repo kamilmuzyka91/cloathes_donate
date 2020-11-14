@@ -1,0 +1,33 @@
+.steps__shipping {
+  display: flex;
+  justify-content: space-evenly;
+  background: #f0f1f1;
+  .steps__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: px-rem(70) 0 px-rem(80) 0;
+    .small__title {
+      font-size: px-rem(18);
+      color: $lighten-black;
+      text-align: left;
+      padding-top: px-rem(10);
+    }
+    .small__description {
+      font-size: px-rem(16);
+      color: $lighten-black;
+      text-align: center;
+    }
+    .small__line {
+      padding: px-rem(9) 0 px-rem(9) 0;
+      &::after {
+        content: "";
+        display: inline-block;
+        height: px-rem(0);
+        width: px-rem(70);
+        background: #707070;
+        border: 1px solid#707070;
+      }
+    }
+  }
+}

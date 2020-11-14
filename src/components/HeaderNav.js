@@ -8,7 +8,7 @@ function HeaderNav() {
     <>
       <section className="header__nav">
         <Navigation />
-        <OpenSection />,
+        <OpenSection />
       </section>
     </>
   );

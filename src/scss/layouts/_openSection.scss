@@ -22,19 +22,5 @@
   .open__cta {
     display: inline-flex;
     margin: px-rem(20);
-    .open__cta__btn {
-      display: inline-flex;
-      font-size: px-rem(36);
-      text-transform: uppercase;
-      color: $lighten-black;
-      border: px-rem(1) solid #000;
-      margin: px-rem(20);
-    }
-    .btn__one {
-      padding: px-rem(10) px-rem(120);
-    }
-    .btn__two {
-      padding: px-rem(10) px-rem(80);
-    }
   }
 }

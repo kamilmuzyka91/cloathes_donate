@@ -3,11 +3,14 @@
 @import "./settings/colors";
 @import "./settings/mixins";
 
+@import "./layouts/ctaButton";
+
 @import "./layouts/header";
 @import "./layouts/navigation";
 @import "./layouts/openSection";
 @import "./layouts/statistic";
 @import "./layouts/steps";
+@import "./layouts/stepsDescription";
 
 * {
   box-sizing: border-box;

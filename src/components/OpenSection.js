@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import Decoration from "../assets/Decoration.svg";
+import CtaButton from "./CtaButton";
 
 function OpenSection() {
   return (
@@ -17,12 +18,9 @@ function OpenSection() {
         height="900px"
       />
       <div className="open__cta">
-        <NavLink className="open__cta__btn btn__one" to="/logowanie">
-          oddaj rzeczy
-        </NavLink>
-        <NavLink className="open__cta__btn btn__two" to="/logowanie">
-          zorganizuj zbiórkę
-        </NavLink>
+      <CtaButton item="oddaj rzeczy" />
+      <CtaButton item="zorganizuj zbiórkę" />
+
       </div>
     </section>
   );

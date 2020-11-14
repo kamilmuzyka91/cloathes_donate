@@ -8,7 +8,7 @@ import Statistic from "./Statistic";
 function Home() {
   return (
     <>
-    <Header /> ,
+    <Header /> 
     <Statistic bag="10" organization="10" collection="10"/>
     </>
   )

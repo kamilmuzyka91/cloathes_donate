@@ -1,18 +1,27 @@
-.statistic{
-    background-image: url("../../assets/ColumnsBackground.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.statistic {
+  background-image: url("../../assets/ColumnsBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-    .entries {
-        display: inline-flex;
-        align-items: center;
-        margin-top: px-rem(50);
-        .statistic__bag {
-           text-align: center;
-           .statistic__title {
-               color:red;
-           }
-        }
-    }
+  display: flex;
+  padding: px-rem(50) px-rem(50);
+  text-align: center;
+
+  .statistic__counter {
+    font-size: px-rem(90);
+    color: $darker-yellow;
+  }
+  .statistic__title {
+    font-size: px-rem(18);
+    color: $lighten-black;
+    letter-spacing: px-rem(-0.36);
+    padding: px-rem(10) 0 px-rem(30) 0 ;
+  }
+  .statistic__entry {
+    font-family: $font-alt;
+    font-size: px-rem(16);
+    color: $lighten-black;
+    letter-spacing: px-rem(-0.32);
+  }
 }

@@ -6,9 +6,9 @@ import Decoration from "../assets/Decoration.svg";
 function OpenSection() {
   return (
     <section className="open">
-      <div className="open__title">
+      <h1 className="open__title">
         Zacznij pomagać! Oddaj niechciane rzeczy w zaufane ręce
-      </div>
+      </h1>
       <img
         className="open__img"
         src={Decoration}

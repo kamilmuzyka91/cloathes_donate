@@ -6,16 +6,16 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 
-import SignUp from "./components/SignUp";
-import LogIn from "./components/LogIn";
-import LogOut from "./components/LogOut";
+import SignUp from "./components/login/Signup";
+import LogIn from "./components/login/Login";
+import AdminPanel from "./components/login/AdminPanel";
 
 function App() {
   const user = useUser();
   return (
     <>
       <div className="App">
-        {user && <LogOut />}
+        {user && <AdminPanel />}
         {!user && (
           <>
             <SignUp />

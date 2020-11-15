@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
 
-const LogIn = () => {
+const Login = () => {
   // User State
   const [user, setUser] = useState({
     email: "",
@@ -72,4 +72,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default Login;

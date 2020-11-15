@@ -1,8 +1,8 @@
 import React from "react";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
-// import { useUser } from 'reactfire';
-const LogOut = () => {
+
+const AdminPanel = () => {
   // Import firebase
   const firebase = useFirebaseApp();
 
@@ -12,15 +12,13 @@ const LogOut = () => {
   };
 
   return (
-  
-
-
-    <>
-      <button type="button" onClick={handleClick}>
-        Log Out
+<section className="AdminPanel">
+<h1 className="title">No kurła gratulacje...</h1>
+<button type="button" onClick={handleClick}>
+        Wyloguj
       </button>
-    </>
+</section>
   );
 };
 
-export default LogOut;
+export default AdminPanel;

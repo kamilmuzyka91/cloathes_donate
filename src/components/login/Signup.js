@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useFirebaseApp } from 'reactfire';
 import 'firebase/auth'
 
-const Signup = () => {
+const Signup = function () {
   // User State
   const [user, setUser] = useState({
     nickname: '',
@@ -18,7 +18,7 @@ const Signup = () => {
       ...user,
       [e.target.name]: e.target.value,
       error: '',
-    })
+    });
   };
 
   // Import firebase
@@ -36,7 +36,7 @@ const Signup = () => {
         });
 
         // URL of my website.
-        const myURL = { url: 'http://localhost:3000/' }
+        const myURL = { url: 'http://localhost:3000/' };
 
         // Send Email Verification and redirect to my website.
         result.user.sendEmailVerification(myURL)
@@ -44,14 +44,14 @@ const Signup = () => {
             setUser({
               ...user,
               verifyEmail: `Welcome ${user.nickname}. To continue please verify your email.`,
-            })
+            });
           })
           .catch(error => {
             setUser({
               ...user,
               error: error.message,
-            })
-          })
+            });
+          });
 
         // Sign Out the user.
         firebase.auth().signOut();
@@ -60,23 +60,23 @@ const Signup = () => {
         setUser({
           ...user,
           error: error.message,
-        })
-      })
-  }
+        });
+      });
+  };
 
   return (
     <>
       <h1>Sign up</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Nickname" name="nickname" onChange={handleChange}/><br />
-        <input type="text" placeholder="Email" name="email" onChange={handleChange}/><br />
-        <input type="password" placeholder="Password" name="password" onChange={handleChange}/><br />
+        <input type="text" placeholder="Nickname" name="nickname" onChange={handleChange} /><br />
+        <input type="text" placeholder="Email" name="email" onChange={handleChange} /><br />
+        <input type="password" placeholder="Password" name="password" onChange={handleChange} /><br />
         <button type="submit">Sign Up</button>
       </form>
       {user.error && <h4>{user.error}</h4>}
       {user.verifyEmail && <h4>{user.verifyEmail}</h4>}
     </>
-  )
+  );
 };
 
 export default Signup;

@@ -6,29 +6,29 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 
-import SignUp from "./components/login/Signup";
-import LogIn from "./components/login/Login";
-import AdminPanel from "./components/login/AdminPanel";
+// import SignUp from "./components/login/Signup";
+// import Login from "./components/login/Login";
+// import AdminPanel from "./components/login/AdminPanel";
+
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import Zalogowano from "./components/Zalogowano";
 
 function App() {
   const user = useUser();
+
   return (
     <>
-      <div className="App">
-        {user && <AdminPanel />}
-        {!user && (
-          <>
-            <SignUp />
-            <LogIn />
-          </>
-        )}
+      <div className="div">
+        {user && <Zalogowano />}
+        {!user && <Home />}
       </div>
-
       <HashRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/logowanie" component={LogIn} />
-          <Route exact path="/rejestracja" component={SignUp} />
+          <Route path="/logowanie" component={SignIn} />
+          <Route path="/rejestracja" component={SignUp} />
+          <Route path="/zalogowano" component={Zalogowano} />
           <Route path="*" component={NotFound} />
         </Switch>
       </HashRouter>

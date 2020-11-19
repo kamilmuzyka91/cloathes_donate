@@ -9,9 +9,9 @@ function OpenSection() {
       <h1 className="open__title">
         Zacznij pomagać! Oddaj niechciane rzeczy w zaufane ręce
       </h1>
-      <Decoration/>
+      <Decoration />
       <div className="open__cta">
-        <CtaButton item="oddaj rzeczy" />
+        <CtaButton item="oddaj rzeczy" to="/logowanie"/>
         <CtaButton item="zorganizuj zbiórkę" />
       </div>
     </section>

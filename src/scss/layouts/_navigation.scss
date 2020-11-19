@@ -31,6 +31,11 @@
       font-family: $font-base;
       font-size: px-rem(18);
       color: $lighten-black;
+      border: 1px solid transparent;
+      padding: 10px;
+      &:hover {
+        border: 1px solid red;
+      }
     }
   }
 }

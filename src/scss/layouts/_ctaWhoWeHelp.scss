@@ -1,0 +1,23 @@
+.whoWeHelp__navigation {
+  display: flex;
+  justify-content: center;
+
+  .whoWeHelp__link {
+    font-size: px-rem(24);
+    color: $lighten-black;
+    margin: px-rem(70) 0 px-rem(80) 0;
+  }
+
+  .cta__nav {
+    padding: px-rem(25) px-rem(45);
+    margin: px-rem(70) 0 px-rem(40) px-rem(100);
+    border: 1px solid transparent;
+    &:hover {
+      border: px-rem(0.75) solid $lighten-black;
+      cursor: pointer;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

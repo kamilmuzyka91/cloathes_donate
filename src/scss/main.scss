@@ -15,13 +15,15 @@
 @import "./layouts/aboutUs";
 // @import "./layouts/signup";
 @import "./layouts/whoWeHelp";
+@import "./layouts/ctaWhoWeHelp";
+@import "./layouts/fundation";
 
 * {
   box-sizing: border-box;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1315px;
   margin: 0 auto;
 }
 

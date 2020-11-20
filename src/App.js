@@ -15,14 +15,10 @@ import SignUp from "./components/SignUp";
 import Zalogowano from "./components/Zalogowano";
 
 function App() {
-  const user = useUser();
+  // const user = useUser();
 
   return (
     <>
-      <div className="div">
-        {user && <Zalogowano />}
-        {!user && <Home />}
-      </div>
       <HashRouter>
         <Switch>
           <Route exact path="/" component={Home} />

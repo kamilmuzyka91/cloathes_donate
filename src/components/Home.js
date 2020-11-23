@@ -6,6 +6,7 @@ import Steps from "./Steps";
 import AboutUs from "./AboutUs";
 import WhoWeHelp from "./whoWeHelp/WhoWeHelp";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <AboutUs />
       <WhoWeHelp />
       <Contact/>
+      <Footer/>
     </>
   );
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 import Decoration from "../../components/Decoration";
 import WhoWeHelpNav from "./WhoWeHelpNav";
 

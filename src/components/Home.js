@@ -5,6 +5,7 @@ import Statistic from "./Statistic";
 import Steps from "./Steps";
 import AboutUs from "./AboutUs";
 import WhoWeHelp from "./whoWeHelp/WhoWeHelp";
+import Contact from "./Contact";
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
       <Steps />
       <AboutUs />
       <WhoWeHelp />
+      <Contact/>
     </>
   );
 }

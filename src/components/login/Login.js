@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
+import "./AdminPanel";
 
 const Login = () => {
   // User State
@@ -33,7 +34,7 @@ const Login = () => {
         if (!result.user.emailVerified) {
           setUser({
             ...user,
-            error: "Please verify your email before to continue",
+            error: "Sprawdź swój email",
           });
           firebase.auth().signOut();
         }
@@ -68,8 +69,11 @@ const Login = () => {
         <button type="submit">Log in</button>
       </form>
       {user.error && <h4>{user.error}</h4>}
+      
+      
     </>
   );
 };
 
 export default Login;
+

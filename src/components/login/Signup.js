@@ -43,7 +43,7 @@ const Signup = function () {
           .then(() => {
             setUser({
               ...user,
-              verifyEmail: `Welcome ${user.nickname}. To continue please verify your email.`,
+              verifyEmail: `Cześć ${user.nickname}. Proszę zweryfikować swój adres email.`,
             });
           })
           .catch(error => {

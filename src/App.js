@@ -14,7 +14,7 @@ function App() {
   const user = useUser();
   return (
     <>
-      <div className="App">
+      <div className="register">
         {user && <AdminPanel />}
         {!user && (
           <>
@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/logowanie" component={LogIn} />
           <Route exact path="/rejestracja" component={SignUp} />
+          <Route exact path="/admin" component={AdminPanel} />
           <Route path="*" component={NotFound} />
         </Switch>
       </HashRouter>

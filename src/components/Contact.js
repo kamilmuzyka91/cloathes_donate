@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Clothes from "../assets/Background-Contact-Form.jpg";
+// import Clothes from "../assets/Background-Contact-Form.jpg";
 import Decoration from "./Decoration";
 
 class Contact extends Component {
@@ -16,7 +16,7 @@ class Contact extends Component {
   render() {
     return (
       <section className="contact" id="section_5">
-       <img className="clothes__picture" src={Clothes} alt="Clothes" />
+       {/* <img className="clothes__picture" src={Clothes} alt="Clothes" /> */}
         <div className="contact__form">
           <h1 className="contact__title">Skontaktuj się z nami</h1>
           <Decoration />
@@ -47,7 +47,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="contact__message">
-              <label className="form__inputMessage">Wpisz swoją wiadomość</label>
+              <label className="form__inputTitle">Wpisz swoją wiadomość</label>
               <textarea
                 className="form__inputMessage"
                 cols="20"

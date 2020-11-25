@@ -45,9 +45,12 @@
     .contact__message {
       display: flex;
       flex-direction: column;
-      .form__inputMessage {
+      .form__inputTitle {
         font-size: px-rem(18);
         margin-bottom: px-rem(15);
+      }
+      .form__inputMessage {
+        border-bottom: 1px solid $lighten-black;
         &::placeholder {
           color: #3c3c3c26;
         }

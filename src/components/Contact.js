@@ -47,7 +47,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="contact__message">
-              <label className="form__inputMessage">Wpisz swoją wiadomość</label>
+              <label className="form__inputTitle">Wpisz swoją wiadomość</label>
               <textarea
                 className="form__inputMessage"
                 cols="20"

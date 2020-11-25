@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
 import Navigation from "./Navigation";
+import Decoration from "./Decoration";
 
 const SignIn = () => {
   // User State
@@ -51,24 +52,29 @@ const SignIn = () => {
   return (
     <>
       <Navigation />
-      <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Email"
-          name="email"
-          onChange={handleChange}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          onChange={handleChange}
-        />
-        <br />
-        <button type="submit">Log in</button>
-      </form>
+      <h1>Zaloguj się</h1>
+      <Decoration />
+      <div className="form__login">
+        <form onSubmit={handleSubmit}>
+          Email
+          <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            onChange={handleChange}
+          />
+          <br />
+          Hasło
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            onChange={handleChange}
+          />
+          <br />
+          <button type="submit">Log in</button>
+        </form>
+      </div>
       {user.error && <h4>{user.error}</h4>}
     </>
   );

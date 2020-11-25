@@ -1,6 +1,14 @@
 .footer {
-    display: flex;
-.footer__copy {
-    align-self: center;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .footer__copy {
+    margin-left: 45%;
+  }
+  .social {
+    margin-right: 20%;
+    .Instagram__ikon {
+      padding-left: px-rem(15);
+    }
+  }
 }

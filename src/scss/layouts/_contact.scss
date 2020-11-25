@@ -1,19 +1,23 @@
 .contact {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  //   width: 100%;
-  //   height: 100vh;
-  padding-right: px-rem(200);
-
-  .clothes__picture {
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url("../../assets/Background-Contact-Form.jpg");
     opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 
   .contact__form {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
+    margin-right: 15%;
+
     .contact__title {
       font-size: px-rem(38);
       letter-spacing: px-rem(-0.76);

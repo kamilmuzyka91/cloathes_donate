@@ -69,16 +69,19 @@ function Navigation() {
             </Link>
           </li>
           <li className="nav__element__bottom">
-            <Link
-              className="nav__link__bottom"
-              activeClass="active"
-              to="section_5"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              Kontakt
-            </Link>
+            <NavLink to="/contact">
+             
+              <Link
+                className="nav__link__bottom"
+                activeClass="active"
+                to="section_5"
+                spy={true}
+                smooth={true}
+                duration={1000}
+              >
+                Kontakt
+              </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

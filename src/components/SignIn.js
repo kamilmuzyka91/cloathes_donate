@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
-
+import Navigation from "./Navigation";
 
 const SignIn = () => {
   // User State
@@ -50,6 +50,7 @@ const SignIn = () => {
 
   return (
     <>
+      <Navigation />
       <h1>Log In</h1>
       <form onSubmit={handleSubmit}>
         <input

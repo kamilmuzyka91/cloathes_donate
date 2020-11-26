@@ -57,10 +57,12 @@
       }
 
       .btn__submit {
+        font-size: px-rem(18);
+        color: #000;
         align-self: flex-end;
-        padding: px-rem(15) px-rem(50);
         background: #fff;
         margin-top: px-rem(45);
+        padding: px-rem(15) px-rem(50);
         border: px-rem(0.75) solid $lighten-black;
       }
     }

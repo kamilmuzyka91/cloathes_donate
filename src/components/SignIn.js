@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useFirebaseApp } from "reactfire";
 import "firebase/auth";
 import Navigation from "./Navigation";
@@ -74,6 +76,9 @@ const SignIn = () => {
           <br />
           <button type="submit">Log in</button>
         </form>
+        <NavLink className="navlink" to="/rejestracja">
+        Rejestracja link
+      </NavLink>
       </div>
       {user.error && <h4>{user.error}</h4>}
     </>

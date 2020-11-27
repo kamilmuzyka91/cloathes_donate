@@ -21,6 +21,10 @@
 @import "./layouts/contact";
 @import "./layouts/footer";
 
+@import "./layouts/signIn";
+@import "./layouts/signUp";
+@import "./layouts/logOut";
+
 * {
   box-sizing: border-box;
 }

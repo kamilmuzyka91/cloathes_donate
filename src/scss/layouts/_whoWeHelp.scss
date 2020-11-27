@@ -6,26 +6,27 @@
   color: $lighten-black;
 
   h1 {
-    font-size: 38px;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    font-size: px-rem(38);
+    margin-top: px-rem(60);
+    margin-bottom: px-rem(30);
   }
   &__buttons {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: px-rem(80);
+    margin-bottom: px-rem(80);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
     button {
-      font-size: 24px;
+      font-size: px-rem(24);
       cursor: pointer;
-      background-color: white;
+      background-color: #fff;
       border: none;
       color: $lighten-black;
-      width: 200px;
-      height: 100px;
+      width: px-rem(200);
+      height: px-rem(100);
+      margin: px-rem(50);
       &:hover {
         border: 1px solid $lighten-black;
       }
@@ -37,9 +38,9 @@
   flex-direction: row;
   justify-content: center;
   span {
-    margin-left: 5px;
+    margin-left: px-rem(5);
     border: 1px solid $lighten-black;
-    padding: 10px;
+    padding: px-rem(10);
     cursor: pointer;
   }
 }

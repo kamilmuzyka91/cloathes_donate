@@ -12,8 +12,8 @@ import NotFound from "./components/NotFound";
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
-import Zalogowano from "./components/Zalogowano";
 import Contact from "./components/Contact";
+import LogOut from "./components/LogOut";
 
 function App() {
   // const user = useUser();
@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/logowanie" component={SignIn} />
           <Route path="/rejestracja" component={SignUp} />
-          <Route path="/zalogowano" component={Zalogowano} />
+          <Route path="/wylogowano" component={LogOut} />
           <Route path="/contact" component={Contact} />
           <Route path="*" component={NotFound} />
         </Switch>

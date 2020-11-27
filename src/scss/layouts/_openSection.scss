@@ -1,0 +1,20 @@
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: px-rem(220);
+  text-align: center;
+  .open__title {
+    font-size: px-rem(38);
+    text-align: center;
+    color: $lighten-black;
+    letter-spacing: px-rem(-0.76);
+    width: px-rem(670);
+    margin-bottom: px-rem(25);
+  }
+
+  .open__cta {
+    display: inline-flex;
+    margin: px-rem(20);
+  }
+}

@@ -1,0 +1,22 @@
+.fundation__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-alt;
+  margin: 20px;
+  .fundation__info {
+    text-align: left;
+    .fundation__name {
+      font-size: px-rem(26);
+      color: $lighten-black;
+    }
+    .fundation__about {
+      font-size: px-rem(18);
+      color: $lighten-black;
+    }
+    .fundation__whatNeed {
+      font-size: px-rem(18);
+      color: $lighten-black;
+    }
+  }
+}

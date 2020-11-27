@@ -1,0 +1,71 @@
+.contact {
+  position: relative;
+  height: 1000px;
+  &::after {
+    content: "";
+    background-image: url("../../assets/Background-Contact-Form.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .contact__form {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-right: 15%;
+
+    .contact__title {
+      font-size: px-rem(38);
+      letter-spacing: px-rem(-0.76);
+      margin-bottom: px-rem(40);
+    }
+    .form__data {
+      display: flex;
+      .form {
+        font-size: px-rem(16);
+        color: $lighten-black;
+        font-weight: 600;
+        border-bottom: 1px solid $lighten-black;
+        margin: 0 px-rem(15) px-rem(40) 0;
+
+        .form__input {
+          margin-top: px-rem(15);
+
+          &::placeholder {
+            color: #3c3c3c26;
+          }
+        }
+      }
+    }
+
+    .contact__message {
+      display: flex;
+      flex-direction: column;
+      .form__inputTitle {
+        font-size: px-rem(18);
+        margin-bottom: px-rem(15);
+      }
+      .form__inputMessage {
+        border-bottom: 1px solid $lighten-black;
+        &::placeholder {
+          color: #3c3c3c26;
+        }
+      }
+
+      .btn__submit {
+        align-self: flex-end;
+        padding: px-rem(15) px-rem(50);
+        background: #fff;
+        margin-top: px-rem(45);
+        border: px-rem(0.75) solid $lighten-black;
+      }
+    }
+  }
+}

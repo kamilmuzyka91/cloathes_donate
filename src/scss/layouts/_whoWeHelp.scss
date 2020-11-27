@@ -1,0 +1,27 @@
+.whoWeHelp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .whoWeHelp__open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .whoWeHelp__title {
+    color: $lighten-black;
+    font-size: px-rem(38);
+    letter-spacing: px-rem(-0.76);
+    margin: px-rem(50) 0 px-rem(30) 0;
+  }
+  .whoWeHelp__content{
+    margin-bottom: px-rem(200);
+    align-self: flex-start;
+    
+  }
+  .whoWeHelp__descryption {
+    text-align: center;
+    margin: px-rem(40) 0 px-rem(40) 0;
+    width: 640px;
+  }
+  
+}

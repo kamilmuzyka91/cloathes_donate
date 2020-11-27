@@ -1,15 +1,39 @@
-@import "./reset";
+@import "./settings/reset";
 @import "./settings/fonts";
 @import "./settings/colors";
+@import "./settings/mixins";
+
+@import "./layouts/ctaButton";
+@import "./layouts/decoration";
+
+@import "./layouts/header";
+@import "./layouts/navigation";
+@import "./layouts/openSection";
+@import "./layouts/statistic";
+@import "./layouts/steps";
+@import "./layouts/stepsDescription";
+@import "./layouts/aboutUs";
+// @import "./layouts/signup";
+@import "./layouts/whoWeHelp";
+@import "./layouts/ctaWhoWeHelp";
+@import "./layouts/fundation";
+@import "./layouts/contact";
+@import "./layouts/footer";
 
 * {
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1315px;
+  margin: 0 auto;
+}
+
 body {
   font-family: $font-base;
-  background: $darker-yellow;
+  background: #fff;
   .test {
-      font-family: $font-alt;
+    font-family: $font-alt;
+    font-size: px-rem(16);
   }
 }

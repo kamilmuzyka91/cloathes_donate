@@ -14,6 +14,11 @@
       font-family: $font-base;
       font-size: px-rem(14);
       color: $gray;
+      border: 1px solid transparent;
+      padding: 10px;
+      &:hover {
+        border: px-rem(0.75) solid #fad648;
+      }
     }
   }
   // bottom nav
@@ -31,6 +36,11 @@
       font-family: $font-base;
       font-size: px-rem(18);
       color: $lighten-black;
+      border: 1px solid transparent;
+      padding: 10px;
+      &:hover {
+        border: px-rem(0.75) solid $lighten-black;
+      }
     }
   }
 }

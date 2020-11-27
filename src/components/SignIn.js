@@ -29,7 +29,7 @@ const SignIn = (props) => {
                 inputRef={register({
                   required: "Email jest wymagany!",
                   pattern: {
-                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    value: /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                     message: "Podany email jest nieparwidłowy!",
                   },
                 })}
@@ -62,7 +62,7 @@ const SignIn = (props) => {
             </div>
             <div className="login__buttons">
               <button type="submit">Zaloguj się</button>
-              <Link to="/register">
+              <Link to="/rejestracja">
                 <button>Załóż konto</button>
               </Link>
             </div>

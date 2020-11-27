@@ -1,0 +1,56 @@
+.login {
+  color: $lighten-black;
+  margin-bottom: px-rem(200);
+  .navigation {
+    margin-right: px-rem(140);
+    margin-top: px-rem(40);
+  }
+
+  .form {
+    text-align: center;
+    max-width: px-rem(500);
+    margin: auto;
+    margin-top: px-rem(150);
+
+    span {
+      color: red;
+      margin-top: px-rem(10);
+    }
+
+    &__loginGrey {
+      display: flex;
+      flex-direction: column;
+      background-color: $lighten-gray;
+      padding: px-rem(40);
+      max-width: px-rem(400);
+      margin: auto;
+    }
+    h1 {
+      font-size: px-rem(30);
+      margin-bottom: px-rem(20);
+    }
+    label {
+      text-align: left;
+      margin-top: px-rem(30);
+    }
+  }
+  .login__buttons {
+    max-width: px-rem(600);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: px-rem(40);
+
+    button {
+      font-size: px-rem(16);
+      background-color: white;
+      padding: px-rem(16);
+      border: none;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $lighten-black;
+        padding: px-rem(15);
+      }
+    }
+  }
+}

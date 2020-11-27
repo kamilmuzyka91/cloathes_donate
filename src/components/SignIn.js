@@ -1,86 +1,74 @@
 import React, { useState } from "react";
-// import { NavLink } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import { useFirebaseApp } from "reactfire";
-import "firebase/auth";
+import { HashLink as Link } from "react-router-hash-link";
+import { useForm } from "react-hook-form";
+import Input from "@material-ui/core/Input";
+
 import Navigation from "./Navigation";
 import Decoration from "./Decoration";
 
-const SignIn = () => {
-  // User State
-  const [user, setUser] = useState({
-    email: "",
-    password: "",
-    error: "",
-  });
+const SignIn = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // onChange function
-  const handleChange = (e) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value,
-      error: "",
-    });
-  };
-
-  // Import firebase
-  const firebase = useFirebaseApp();
-
-  // Submit function (Log in user)
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Log in code here.
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(user.email, user.password)
-      .then((result) => {
-        if (!result.user.emailVerified) {
-          setUser({
-            ...user,
-            error: "Please verify your email before to continue",
-          });
-          firebase.auth().signOut();
-        }
-      })
-      .catch((error) => {
-        // Update the error
-        setUser({
-          ...user,
-          error: error.message,
-        });
-      });
-  };
+  const { handleSubmit, register, errors } = useForm();
+  const onSubmit = (values) => console.log(values);
 
   return (
     <>
-      <Navigation />
-      <h1>Zaloguj się</h1>
-      <Decoration />
-      <div className="form__login">
-        <form onSubmit={handleSubmit}>
-          Email
-          <input
-            type="text"
-            placeholder="Email"
-            name="email"
-            onChange={handleChange}
-          />
-          <br />
-          Hasło
-          <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={handleChange}
-          />
-          <br />
-          <button type="submit">Log in</button>
-        </form>
-        <NavLink className="navlink" to="/rejestracja">
-        Rejestracja link
-      </NavLink>
+      <div className="login">
+        <Navigation />
+
+        <div className="form">
+          <h1>Zaloguj się</h1>
+          <Decoration />
+          <form className="form__login" onSubmit={handleSubmit(onSubmit)}>
+            <div className="form__loginGrey">
+              <label>Email</label>
+              <Input
+                name="email"
+                inputRef={register({
+                  required: "Email jest wymagany!",
+                  pattern: {
+                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "Podany email jest nieparwidłowy!",
+                  },
+                })}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <span>
+                {errors.email && errors.email.message}
+                <br />
+              </span>
+              <label>Hasło</label>
+              <Input
+                inputRef={register({ required: true, minLength: 6 })}
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {errors.password && (
+                <div>
+                  {errors.password.type === "required" && (
+                    <span>Hasło jest wymagane!</span>
+                  )}
+                  {errors.password.type === "minLength" && (
+                    <span>Hasło jest za krótkie! </span>
+                  )}
+                </div>
+              )}
+            </div>
+            <div className="login__buttons">
+              <button type="submit">Zaloguj się</button>
+              <Link to="/register">
+                <button>Załóż konto</button>
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
-      {user.error && <h4>{user.error}</h4>}
     </>
   );
 };

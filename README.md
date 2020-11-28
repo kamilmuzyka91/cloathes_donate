@@ -29,4 +29,5 @@ Check out demo page here: [demo](https://cloathes-donate.netlify.app/)
 ## In progress
 
 - Mobile first
+- Views after logging in
 - Admin Panel

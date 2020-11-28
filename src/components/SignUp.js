@@ -1,106 +1,100 @@
-import React, { useState } from "react";
-import { useFirebaseApp } from "reactfire";
-import "firebase/auth";
-import Navigation from "./Navigation";
+import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import { useForm } from "react-hook-form";
+import Input from "@material-ui/core/Input";
 
-const Signup = function () {
-  // User State
-  const [user, setUser] = useState({
-    nickname: "",
-    email: "",
-    password: "",
-    error: "",
-    verifyEmail: "",
-  });
+import Navifation from "./Navigation";
+import Decoration from "./Decoration";
+import { Validate } from "../validators";
 
-  // onChange function
-  const handleChange = (e) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value,
-      error: "",
-    });
-  };
-
-  // Import firebase
-  const firebase = useFirebaseApp();
-
-  // Submit function (Create account)
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Sign up code here.
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(user.email, user.password)
-      .then((result) => {
-        // Update the nickname
-        result.user.updateProfile({
-          displayName: user.nickname,
-        });
-
-        // URL of my website.
-        const myURL = { url: "http://localhost:3000/" };
-
-        // Send Email Verification and redirect to my website.
-        result.user
-          .sendEmailVerification(myURL)
-          .then(() => {
-            setUser({
-              ...user,
-              verifyEmail: `Welcome ${user.nickname}. To continue please verify your email.`,
-            });
-          })
-          .catch((error) => {
-            setUser({
-              ...user,
-              error: error.message,
-            });
-          });
-
-        // Sign Out the user.
-        firebase.auth().signOut();
-      })
-      .catch((error) => {
-        // Update the error
-        setUser({
-          ...user,
-          error: error.message,
-        });
-      });
-  };
+const Register = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { handleSubmit, register, errors, getValues } = useForm();
+  const onSubmit = (values) => console.log(values);
 
   return (
-    <>
-      <Navigation />
-      <h1>Sign up</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Nickname"
-          name="nickname"
-          onChange={handleChange}
-        />
-        <br />
-        <input
-          type="text"
-          placeholder="Email"
-          name="email"
-          onChange={handleChange}
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          onChange={handleChange}
-        />
-        <br />
-        <button type="submit">Sign Up</button>
-      </form>
-      {user.error && <h4>{user.error}</h4>}
-      {user.verifyEmail && <h4>{user.verifyEmail}</h4>}
-    </>
+    <div className="register">
+      <Navifation />
+      <div className="form">
+        <h1>Załóż konto</h1>
+
+        <Decoration />
+        <form className="form__register" onSubmit={handleSubmit(onSubmit)}>
+          <div className="form__registerGrey">
+            <label>Email</label>
+            <Input
+              name="email"
+              inputRef={register({
+                required: "Email jest wymagany!",
+                pattern: {
+                  value: /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "Podany email jest nieparwidłowy!",
+                },
+              })}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <span>
+              {errors.email && errors.email.message}
+              <br />
+            </span>
+            <label>Hasło</label>
+            <Input
+              inputRef={register({ required: true, minLength: 6 })}
+              name="password"
+              type="password"
+              autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            {errors.password && (
+              <div>
+                {errors.password.type === "required" && (
+                  <span>Hasło jest wymagane!</span>
+                )}
+                {errors.password.type === "minLength" && (
+                  <span>Hasło jest za krótkie! </span>
+                )}
+              </div>
+            )}
+
+            <label>Powtórz hasło</label>
+            <Input
+              inputRef={register({
+                required: true,
+                minLength: 6,
+                validate: { Validate: Validate(getValues, "password") },
+              })}
+              name="passwordConfirmation"
+              className="input is-large"
+              type="password"
+              autoComplete="current-password"
+            />
+            {errors.passwordConfirmation && (
+              <div className="form-error">
+                {errors.passwordConfirmation.type === "required" && (
+                  <span>Hasło jest wymagane! </span>
+                )}
+                {errors.passwordConfirmation.type === "minLength" && (
+                  <span>Hasło jest za krótkie!</span>
+                )}
+                {errors.passwordConfirmation.type === "Validate" && (
+                  <span>Hasło musi być takie same!</span>
+                )}
+              </div>
+            )}
+          </div>
+          <div className="register__buttons">
+            <Link to="/logowanie">
+              <button>Zaloguj</button>
+            </Link>
+            <button type="submit">Załóż konto</button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 
-export default Signup;
+export default Register;

@@ -1,0 +1,36 @@
+.logOut {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .navigation {
+    margin-right: px-rem(140);
+    margin-top: px-rem(40);
+  }
+
+  .logOut__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: px-rem(150);
+
+    .logout__title {
+      font-size: px-rem(40);
+      color: $lighten-black;
+      text-align: center;
+      max-width: px-rem(500);
+    }
+
+    .decoration {
+      margin: px-rem(40) 0 px-rem(40) 0;
+    }
+  }
+
+  .btn {
+    align-self: flex-end;
+    padding: px-rem(15) px-rem(15);
+    background: #fff;
+    margin-top: px-rem(45);
+    border: px-rem(0.75) solid $lighten-black;
+  }
+}

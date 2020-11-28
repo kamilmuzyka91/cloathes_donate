@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Navigation() {
   return (
@@ -8,80 +7,50 @@ function Navigation() {
       <nav className="navigation">
         <ul className="navigation__top">
           <li className="nav__element__top">
-            <NavLink className="nav__link__top" to="/logowanie">
+            <Link className="nav__link__top" to="/logowanie">
               Zaloguj
-            </NavLink>
+            </Link>
           </li>
           <li className="nav__element__top">
-            <NavLink className="nav__link__top" to="/rejestracja">
+            <Link className="nav__link__top" to="/rejestracja">
               Załóż konto
-            </NavLink>
+            </Link>
           </li>
         </ul>
         {/* bottom menu */}
         <ul className="navigation__bottom">
           <li className="nav__element__bottom">
-            <Link
-              className="nav__link__bottom"
-              activeClass="active"
-              to="section_1"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
+            <Link className="nav__link__bottom" to="/">
               Start
             </Link>
           </li>
           <li className="nav__element__bottom">
-            <Link
-              className="nav__link__bottom"
-              activeClass="active"
-              to="section_2"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              O co chodzi?
+            <Link smooth to="#section_2">
+              <Link className="nav__link__bottom" to="/">
+                O co chodzi
+              </Link>
             </Link>
           </li>
           <li className="nav__element__bottom">
-            <Link
-              className="nav__link__bottom"
-              activeClass="active"
-              to="section_3"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              O nas
+            <Link smooth to="#section_3">
+              <Link className="nav__link__bottom" to="/">
+                O nas
+              </Link>
             </Link>
           </li>
           <li className="nav__element__bottom">
-            <Link
-              className="nav__link__bottom"
-              activeClass="active"
-              to="section_4"
-              spy={true}
-              smooth={true}
-              duration={1000}
-            >
-              Fundacja i organizacje
+            <Link smooth to="#section_4">
+              <Link className="nav__link__bottom" to="/">
+                Fundacja i organizacje
+              </Link>
             </Link>
           </li>
           <li className="nav__element__bottom">
-            <NavLink to="/contact">
-             
-              <Link
-                className="nav__link__bottom"
-                activeClass="active"
-                to="section_5"
-                spy={true}
-                smooth={true}
-                duration={1000}
-              >
+            <Link smooth to="#section_5">
+              <Link className="nav__link__bottom" to="/">
                 Kontakt
               </Link>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>

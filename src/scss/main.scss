@@ -13,12 +13,20 @@
 @import "./layouts/steps";
 @import "./layouts/stepsDescription";
 @import "./layouts/aboutUs";
-// @import "./layouts/signup";
 @import "./layouts/whoWeHelp";
 @import "./layouts/ctaWhoWeHelp";
-@import "./layouts/fundation";
+@import "./layouts/fundations";
+@import "./layouts/organizations";
+@import "./layouts/local";
 @import "./layouts/contact";
 @import "./layouts/footer";
+
+@import "./layouts/signIn";
+@import "./layouts/signUp";
+@import "./layouts/logOut";
+
+@import "./layouts/notFound";
+
 
 * {
   box-sizing: border-box;

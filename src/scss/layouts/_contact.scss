@@ -1,6 +1,7 @@
 .contact {
   position: relative;
   height: 1000px;
+  margin-top: px-rem(50);
   &::after {
     content: "";
     background-image: url("../../assets/Background-Contact-Form.jpg");
@@ -15,6 +16,7 @@
     z-index: -1;
   }
   .contact__title__container {
+    margin-top: px-rem(200);
     text-align: center;
   }
 

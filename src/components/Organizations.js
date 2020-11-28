@@ -10,7 +10,7 @@ const Organizations = () => {
       <div className="organization first">
         <div className="organization__left">
           <h1>Organizacja "Lorem ipsum 1"</h1>
-          <h2>Lorem ipsum dolor sit amet, lorem consectetur adipisc Pellentesque.</h2>
+          <h2>Lorem ipsum dolor sit amet, loremdc consectetur adipisc Pellentesque.</h2>
         </div>
         <div>
           <p>lorem, ipsum, dolor, sit, amet</p>

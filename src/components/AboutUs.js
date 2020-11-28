@@ -1,4 +1,5 @@
 import React from "react";
+
 import Decoration from "./Decoration";
 import Signature from "../assets/Signature.svg";
 import People from "../assets/People.jpg";

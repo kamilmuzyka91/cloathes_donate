@@ -1,10 +1,11 @@
-import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import { useForm } from "react-hook-form";
 import Input from "@material-ui/core/Input";
+
 import Navifation from "./Navigation";
 import Decoration from "./Decoration";
 import { Validate } from "../validators";
-import { HashLink as Link } from "react-router-hash-link";
 
 const Register = (props) => {
   const [email, setEmail] = useState("");

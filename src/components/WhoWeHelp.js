@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import Decoration from "./Decoration";
-
 import Fundations from "./Fundations";
 import Local from "./Local";
 import Organizations from "./Organizations";

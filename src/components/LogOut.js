@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Navigation from "./Navigation";
 import Decoration from "./Decoration";
-import { Link } from "react-router-dom";
 
 const LogOut = () => {
   return (

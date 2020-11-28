@@ -18,11 +18,15 @@ Check out demo page here: [demo](https://cloathes-donate.netlify.app/)
 
 [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
-[react-scroll](https://www.npmjs.com/package/react-scroll)
+[react-router-hash-link](https://www.npmjs.com/package/react-router-hash-link)
+
+[react-hook-form](https://www.npmjs.com/package/react-hook-form)
+
+[Material-UI](https://material-ui.com/)
 
 [Sass](https://www.npmjs.com/package/sass)
 
-## Methodology
+## In progress
 
-- Mobile first design
-- BEM
+- Mobile first
+- Admin Panel

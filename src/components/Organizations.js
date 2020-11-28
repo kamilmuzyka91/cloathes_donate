@@ -2,7 +2,7 @@ import React from "react";
 
 const Organizations = () => {
   return (
-    <div className="organizations" id="#organizations">
+    <div className="organizations">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a
         elit viverra elementuma. Aliquam erat volutpat.

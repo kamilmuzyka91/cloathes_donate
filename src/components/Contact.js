@@ -46,8 +46,10 @@ function Contact() {
       })
       .catch((error) => {
         console.log(error);
+        console.log(cont);
       });
   };
+  
   return (
     <>
       <section className="contact" id="section_5">

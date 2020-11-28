@@ -18,7 +18,7 @@ const Organizations = () => {
       </div>
       <div className="organization">
         <div className="organization__left">
-          <h1>Organizacja "Lorem ipsum 2"</h1>
+          <h1>Organizacja "Lorem lorem ipsum 2"</h1>
           <h2>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque.</h2>
         </div>
         <div>
